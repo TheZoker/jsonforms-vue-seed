@@ -10,6 +10,7 @@
       @change="onChange"
     />
   </div>
+  <button @click="onClick">Change UI Schema</button>
 </template>
 
 <script lang="ts">
@@ -133,6 +134,33 @@ export default defineComponent({
   methods: {
     onChange(event: JsonFormsChangeEvent) {
       this.data = event.data;
+    },
+    onClick() {
+      this.uischema = {
+        type: "HorizontalLayout",
+        elements: [
+          {
+            type: "VerticalLayout",
+            elements: [
+              {
+                type: "Control",
+                scope: "#/properties/name",
+              },
+              {
+                type: "Control",
+                scope: "#/properties/description",
+                options: {
+                  multi: true,
+                }
+              },
+              {
+                type: "Control",
+                scope: "#/properties/done",
+              },
+            ],
+          },
+        ]
+      };
     },
   },
   provide() {
