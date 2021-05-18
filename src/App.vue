@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import Vue from "vue";
 import { JsonForms } from "@jsonforms/vue2";
 import { vanillaRenderers } from "@jsonforms/vue2-vanilla";
 
@@ -22,7 +22,8 @@ const schema = {
   },
 };
 
-@Component({
+export default Vue.extend({
+  name: "App",
   components: {
     JsonForms,
   },
@@ -32,8 +33,7 @@ const schema = {
       schema,
     };
   },
-})
-export default class App extends Vue {}
+});
 </script>
 
 <style>
