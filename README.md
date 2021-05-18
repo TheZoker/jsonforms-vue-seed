@@ -1,15 +1,24 @@
-# JSON Forms Vue 2 Seed
+# vue2-test
 
-This seed demonstrates how to use [JSON Forms](https://jsonforms.io) with Vue in order to render a simple form for displaying a task entity.
-You can find the [Vue 3 seed on the `main` branch](https://github.com/eclipsesource/jsonforms-vue-seed).
+## Project setup
+```
+npm install
+```
 
-It is based on the `vue create` Hello World project.
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-`src/App.vue` contains the JSON Forms specific code.
+### Compiles and minifies for production
+```
+npm run build
+```
 
-- Execute `npm ci` to install the prerequisites.
-- Execute `npm run serve` to start the application.
+### Lints and fixes files
+```
+npm run lint
+```
 
-Browse to http://localhost:8080 to see the application in action.
-
-For more information please see the JSON Forms Vue [documentation](https://jsonforms.io/docs/integrations/vue).
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
