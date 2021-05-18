@@ -8,9 +8,9 @@
 <script lang="ts">
 import Vue from "vue";
 import { JsonForms } from "@jsonforms/vue2";
-import { vanillaRenderers } from "@jsonforms/vue2-vanilla";
+import testRenderer from "./TestRenderer.vue";
 
-const renderers = [...vanillaRenderers];
+const renderers = [{ tester: () => 1, renderer: testRenderer }];
 
 const schema = {
   properties: {
